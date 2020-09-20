@@ -9,6 +9,7 @@ CustomQGraphicsScene::CustomQGraphicsScene(QObject *parent) : QGraphicsScene(par
     qDebug() << "shiii jit";
     xc=0;
     yc=0;
+
 }
 
 void CustomQGraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *e)

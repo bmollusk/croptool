@@ -16,7 +16,8 @@
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
 #include <QPushButton>
-#include <math.h>
+#include <QGraphicsPixmapItem>
+#include <cmath>
 
 
 QT_BEGIN_NAMESPACE
@@ -29,10 +30,13 @@ class MainWindow : public QMainWindow
 
 public:
    MainWindow(QWidget *parent = nullptr);
-   ~MainWindow();
+   ~MainWindow() override;
 protected:
-    void resizeEvent(QResizeEvent *e);
+    void resizeEvent(QResizeEvent *e) override;
 private slots:
+   void setMaxes(QPixmap,int,int,int,int,int,int,int,int);
+   QPixmap crop_Pixmap(QPixmap&);
+
    void on_actionImport_triggered();
 
    void on_slider_sliderMoved(int position);
@@ -51,6 +55,8 @@ private slots:
 
    void on_actionLoad_Preset_triggered();
 
+   void colorChange();
+
 private:
    Ui::MainWindow *ui;
    QStringList currentFiles = {};
@@ -62,6 +68,7 @@ private:
    QString defaultFileDirectory;
    QVector<QVector<int>> squares;
 
+   QColor color=Qt::black;
 
    int horifill = 0;
    int vertfill = 0;
@@ -73,6 +80,9 @@ private:
 
    void loadSettings();
    void saveSettings();
+
+
+   boolean thedumbestvariableonearth = false;
 };
 
 #endif // MAINWINDOW_H

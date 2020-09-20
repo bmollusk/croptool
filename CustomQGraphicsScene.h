@@ -10,12 +10,13 @@ public:
      CustomQGraphicsScene(QObject *parent);
 
 protected:
-     void mousePressEvent(QGraphicsSceneMouseEvent *e);
+     void mousePressEvent(QGraphicsSceneMouseEvent *e) override;
 public:
 signals:
     void sendCoord(int,int);
 public:
     int xc;
     int yc;
+
 };
 #endif // CUSTOMQGRAPHICSSCENE_H
