@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../build-keyframesfinal-Desktop_Qt_5_13_1_MSVC2017_64bit-Release/icon.png</normaloff>../build-keyframesfinal-Desktop_Qt_5_13_1_MSVC2017_64bit-Release/icon.png</iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
