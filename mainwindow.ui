@@ -14,8 +14,8 @@
    <string>bbcroptool</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>icon.png</normaloff>icon.png</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/new/images/icon.png</normaloff>:/new/images/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
@@ -709,6 +709,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
